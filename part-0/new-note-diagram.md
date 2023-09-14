@@ -1,13 +1,10 @@
 sequenceDiagram
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    activate server
-    Note left of server: The server receives and processes the payload
-    server-->>browser: Status Code 302 - URL Redirect to /exampleapp/notes
-    deactivate server
+    participant browser
+    participant server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
-    server-->>browser: the css file
+    server-->>browser: HTML document
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
