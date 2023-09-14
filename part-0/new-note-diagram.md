@@ -1,7 +1,4 @@
 sequenceDiagram
-    participant browser
-    participant server
-
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
     Note left of server: The server receives and processes the payload
